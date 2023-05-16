@@ -15,8 +15,8 @@
 }
 
 body {
-        background: linear-gradient(75deg,#bfa304 60%, transparent 20%), linear-gradient(105deg, transparent 60%, #bf9d04 80%);
-        background-size: 3em 3em;
-        background-color: #0d0d0d;
+        background: linear-gradient(75deg,#0D0D0D 60%, transparent 20%), linear-gradient(105deg, transparent 50%, #0D0D0D 80%);
+        background-size: 4em 4em;
+        background-color: #0ABF04;
         opacity: 1;
 }

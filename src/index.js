@@ -30,7 +30,7 @@ class AppRouter extends React.Component {
         <div className="app ">
           <div className='w-fit mx-auto'>
             <nav className="main-nav flex flex-col justify-center items-center bg-[#0D0D0D] p-12  rounded-full ">
-            <Link to="/"><h1 className=' text-lg font-display text-[#F2F2F2] text-center'>CHA CHA CHAT-APP</h1></Link><br/>
+            <Link to="/"><h1 className=' text-lg font-display text-[#F2F2F2] text-center'>CHA CHA CHAT-APP</h1></Link>
               {this.state.user &&
                 <a href='#!' onClick={this.logOutUser} className="text-[#ff0000]">Log out</a>
               }
