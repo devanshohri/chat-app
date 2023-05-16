@@ -6,8 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Login from './components/Login';
 import Register from './components/Register';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import firebase, {auth, provider} from './firebase';
-import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+import firebase, {auth} from './firebase';
 
 class AppRouter extends React.Component {
   constructor(props) {
