@@ -20,7 +20,7 @@ class Register extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        const {email, username, password, error} = this.state;
+        const {email, username, password} = this.state;
         firebase.auth().createUserWithEmailAndPassword(email, password).then(() => {
             const user = firebase.auth().currentUser;
             user.updateProfile({displayName: username}).then(() => {
