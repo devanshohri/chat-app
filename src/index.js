@@ -7,6 +7,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import firebase, {auth, provider} from './firebase';
+import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 
 class AppRouter extends React.Component {
   constructor(props) {
@@ -27,18 +28,17 @@ class AppRouter extends React.Component {
   render() {
     return (
       <Router>
-        <div className="app">
-          <nav className="main-nav">
-            {!this.state.user &&
-              <div>
-                <Link to="/Login">Login</Link>
-                <Link to="/register">Register</Link>
-              </div>
-            }
-            {this.state.user &&
-              <a href='#!' onClick={this.logOutUser}>Log out</a>
-            }
-          </nav>
+        <div className="app ">
+          <div className='w-fit mx-auto'>
+            <nav className="main-nav flex flex-col justify-center items-center bg-[#0D0D0D] p-12  rounded-full ">
+            <Link to="/"><h1 className=' text-lg font-display text-[#F2F2F2] text-center'>CHA CHA CHAT-APP</h1></Link><br/>
+              {this.state.user &&
+                <a href='#!' onClick={this.logOutUser} className="text-[#ff0000]">Log out</a>
+              }
+              
+            </nav>
+          </div>
+          
         </div>
         <Switch>
           <Route path="/" exact render={() => <App user={this.state.user}/>} />
