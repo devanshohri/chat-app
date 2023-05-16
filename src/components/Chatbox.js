@@ -39,9 +39,9 @@ class Chatbox extends React.Component {
                         const d = new Date();
 
                         return(
-                            <li key={chat.id} className=" px-4 py-2 rounded-lg rounded-br-none bg-[#0d0d0d] border-2 border-[#078C03] text-white space-y-2 text-sm max-w-xs m-5  order-1 items-end">
+                            <li key={chat.id} className="flex text-left px-4 py-2 rounded-lg rounded-br-none bg-[#0d0d0d] border-2 border-[#078C03] text-white space-y-2 text-sm max-w-xs m-5  order-1 items-end">
                                 <em className="font-display">{postDate.getDate() + monthNames[d.getMonth()]+ ' ' +(postDate.getHours())+':'+(postDate.getMinutes())}</em>&nbsp;
-                                <strong className="text-[#F066F2] font-display">{chat.user}:</strong> &nbsp; 
+                                <strong className="text-[#F066F2] font-display">{chat.user}:</strong> &nbsp; &nbsp;
                                 {chat.message}
                             </li>
                         );
