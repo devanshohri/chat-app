@@ -18,7 +18,7 @@ class Login extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        const {email, password} = this.state;
+        const {email, username, password, error} = this.state;
         firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
                 this.props.history.push('/');
             })
@@ -28,7 +28,7 @@ class Login extends React.Component {
     }
 
     render() {
-        const {email, password, error} = this.state;
+        const {email, username, password, error} = this.state;
         return (
             <div className="auth-container bg-[#0d0d0d] flex flex-col justify-centre max-w-[930px] min-h-[80vh] rounded-3xl py-24 mx-auto mt-8  text-white">
                 <h1 className="w-full text-center text-3xl px-4 font-display">Login</h1>
